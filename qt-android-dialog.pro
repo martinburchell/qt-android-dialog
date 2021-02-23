@@ -22,7 +22,7 @@ gcc {
     QMAKE_CXXFLAGS += -Werror  # warnings become errors
 }
 
-linux-gcc {
+if (gcc | clang):!ios:!android {
     QMAKE_CXXFLAGS += -Wno-deprecated-copy
 }
 
